@@ -6,7 +6,9 @@ import { eti, menu, close } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
+  const [toggle, setToggle] = useState(false);
   return (
+    // Navbar start
     <nav
       className={` ${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
     >
@@ -19,11 +21,13 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
+          {/* Logo */}
           <img src={eti} alt="logo" className="w-9 h-9 object-contain" />
           <p className="text-white text-[18px] font-bold cursor-pointer">
             Eti Kona Paul
           </p>
         </Link>
+        {/* Normal device menu */}
         <ul className="list-none hidden sm:flex flex-row gap-10">
           {navLinks.map((link) => (
             <li
@@ -37,13 +41,34 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+        {/* Toggle option created for small devices */}
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <img
-            src={menu}
+            src={toggle ? close : menu}
             alt="menu"
             className="w-[28px] h-[28px] object-contain cursor-pointer"
-            onClick={() => setActive(menu)}
+            onClick={() => setToggle(!toggle)}
           />
+          <div
+            className={`${
+              !toggle ? "hidden" : "flex"
+            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-20 rounded-xl`}
+          >
+            {/* Small device menu */}
+            <ul className="list-none flex justify-end items-center flex-col gap-4">
+              {navLinks.map((link) => (
+                <li
+                  key={link.id}
+                  className={`${
+                    active === link.title ? "text-white" : "text-secondary"
+                  } hover:text-white text-[16px] font-poppins font-medium cursor-pointer`}
+                  onClick={() => setActive(link.title)}
+                >
+                  <a href={`#${link.id}`}>{link.title}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </nav>

@@ -12,7 +12,6 @@ const TestimonialCard = ({
   image,
   testimonial,
 }) => {
-  console.log(name);
   return (
     <motion.div
       variants={fadeIn("", "spring", index * 0.5, 0.75)}

@@ -34,11 +34,11 @@ const Contact = () => {
         "service_9a6alb3",
         "template_jerhjzg",
         {
-          form_name: form.name,
           to_name: "Eti",
+          form_name: form.name,
+          message: form.message,
           form_email: form.email,
           to_email: "etikonapal@gmail.com",
-          message: form.message,
         },
         "YJHN4w3LOiE2gZeJk"
       )

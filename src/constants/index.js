@@ -18,12 +18,12 @@ import {
   meta,
   starbucks,
   shopify,
-  carrent,
-  jobit,
-  tripguide,
+  // foodstation,
+  // medicare,
   threejs,
 } from "../assets";
-
+import foodstation from "../assets/foodstation.png";
+import medicare from "../assets/medicare.png";
 export const navLinks = [
   {
     id: "about",
@@ -197,12 +197,12 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Medi Care",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A healthcare patient management application that allows patients to easily register, book, and manage their appointments with doctors, featuring administrative tools for scheduling, confirming, and canceling appointments, along with SMS notifications, all built using Next.js.",
     tags: [
       {
-        name: "react",
+        name: "next.js",
         color: "blue-text-gradient",
       },
       {
@@ -214,13 +214,13 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: medicare,
+    source_code_link: "https://github.com/etikona/medi-care",
   },
   {
-    name: "Job IT",
+    name: "Food Station",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "The Food Station Platform is a web application designed to facilitate the donation and distribution of food items to individuals or organizations in need. The platform allows users to view available food donations, make requests for food, and manage the status of donations in real-time.",
     tags: [
       {
         name: "react",
@@ -235,30 +235,30 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: foodstation,
+    source_code_link: "https://github.com/etikona/food-station-client",
   },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
-  },
+  // {
+  //   name: "Trip Guide",
+  //   description:
+  //     "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+  //   tags: [
+  //     {
+  //       name: "nextjs",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: "supabase",
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "css",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   image: tripguide,
+  //   source_code_link: "https://github.com/",
+  // },
 ];
 
 export { services, technologies, experiences, testimonials, projects };

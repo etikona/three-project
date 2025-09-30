@@ -24,6 +24,7 @@ import {
 } from "../assets";
 import foodstation from "../assets/foodstation.png";
 import medicare from "../assets/medicare.png";
+import gachpala from "../assets/gachpala.png";
 export const navLinks = [
   {
     id: "about",
@@ -238,27 +239,28 @@ const projects = [
     image: foodstation,
     source_code_link: "https://github.com/etikona/food-station-client",
   },
-  // {
-  //   name: "Trip Guide",
-  //   description:
-  //     "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-  //   tags: [
-  //     {
-  //       name: "nextjs",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: "supabase",
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "css",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: tripguide,
-  //   source_code_link: "https://github.com/",
-  // },
+  {
+    name: "Gachpala",
+    description:
+      "Gachpala: AI-Powered Plant Health & E-Commerce Platform.Gachpala is an AI-driven web platform that helps plant owners diagnose plant health issues through image recognition while also providing a seamless e-commerce experience for plant care solutions.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "postgresql",
+        color: "green-text-gradient",
+      },
+      {
+        name: "nodejs",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: gachpala,
+
+    source_code_link: "https://github.com/etikona/gachpala-frontend",
+  },
 ];
 
 export { services, technologies, experiences, testimonials, projects };
